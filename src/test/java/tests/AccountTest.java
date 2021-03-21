@@ -5,7 +5,6 @@ import io.qameta.allure.Issue;
 import io.qameta.allure.Link;
 import io.qameta.allure.TmsLink;
 import models.Account;
-import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.testng.annotations.Test;
@@ -33,7 +32,7 @@ public class AccountTest extends BaseTest {
         accountPage.openAccountPage();
         accountPage.isPageOpened();
         //WebElement accountPresent = driver.findElement(By.xpath("//*[text()='" + account.getAccountName1() + "']"));
-        WebElement accountPresent2 = driver.findElement(By.cssSelector("[title="+account.getAccountName1()+"]"));
+        WebElement accountPresent2 = driver.findElement(By.cssSelector("[title=" + account.getAccountName1() + "]"));
         String actualResult = accountPresent2.getText();
         assertEquals(actualResult, String.format(account.getAccountName1()), "контакт не найден");
     }

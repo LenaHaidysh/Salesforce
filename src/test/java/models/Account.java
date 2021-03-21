@@ -7,6 +7,14 @@ public class Account {
     String billingCity;
     String shippingCity;
 
+    public Account(String accountName1, String phone, String website, String billingCity, String shippingCity) {
+        this.accountName1 = accountName1;
+        this.phone = phone;
+        this.website = website;
+        this.billingCity = billingCity;
+        this.shippingCity = shippingCity;
+    }
+
     public String getAccountName1() {
         return accountName1;
     }
@@ -25,14 +33,6 @@ public class Account {
 
     public String getShippingCity() {
         return shippingCity;
-    }
-
-    public Account(String accountName1, String phone, String website, String billingCity, String shippingCity) {
-        this.accountName1 = accountName1;
-        this.phone = phone;
-        this.website = website;
-        this.billingCity = billingCity;
-        this.shippingCity = shippingCity;
     }
 
     @Override

@@ -8,7 +8,7 @@ public class LoginTest extends BaseTest {
     @Test
     public void loginWithValidData() {
         loginPage.openLoginPage();
-        loginPage.login("aromantikova-uhgn@force.com", "aroma9091");
+        loginPage.login("", "");
         //homePage.isPageOpened();
         //WebElement HomeTitle = driver.findElement(By.cssSelector("[title=Sales]"));
         //String actualResult = HomeTitle.getText();

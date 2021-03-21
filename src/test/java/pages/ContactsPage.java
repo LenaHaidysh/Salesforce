@@ -19,7 +19,8 @@ public class ContactsPage extends BasePage {
                 "1&navigationLocation=MRU_LIST&backgroundContext=%2Flightning%2Fo%2FContact%2Flist%3FfilterName%3DRecent");
     }
 
-    @Step("Creating contact {contact.lastName}") //то, что в фигурных скобках - это перееменные, которые будут записаны в отчет в аллюр
+    @Step("Creating contact {contact.lastName}")
+    //то, что в фигурных скобках - это перееменные, которые будут записаны в отчет в аллюр
     public void create(Contact contact) {
         new Input(driver, "Last Name").write(contact.getLastName());
         new LookUp(driver, "Account Name").select(contact.getAccountName());
