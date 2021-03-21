@@ -1,7 +1,5 @@
 package models;
 
-import org.testng.annotations.Test;
-
 //POJO - PLAIN OLD JAVA OBJECT
 public class Contact {
     String firstName;
@@ -9,6 +7,14 @@ public class Contact {
     String accountName;
     String phone;
     String mobile;
+
+    public Contact(String firstName, String lastName, String accountName, String phone, String mobile) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.accountName = accountName;
+        this.phone = phone;
+        this.mobile = mobile;
+    }
 
     public String getFirstName() {
         return firstName;
@@ -28,14 +34,6 @@ public class Contact {
 
     public String getMobile() {
         return mobile;
-    }
-
-    public Contact(String firstName, String lastName, String accountName, String phone, String mobile) {
-        this.firstName = firstName;
-        this.lastName = lastName;
-        this.accountName = accountName;
-        this.phone = phone;
-        this.mobile = mobile;
     }
 
     @Override

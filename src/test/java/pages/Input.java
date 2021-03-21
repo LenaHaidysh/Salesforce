@@ -8,7 +8,7 @@ public class Input {
     WebDriver driver;
     String label;
     String locator = "//*[contains(text(),'%s')]/ancestor::lightning-input//input";
-    String locatorForAccount="//*[contains(text(), '%s')]/ancestor::div[contains(@class, 'uiInput')]//input";
+    String locatorForAccount = "//*[contains(text(), '%s')]/ancestor::div[contains(@class, 'uiInput')]//input";
     String locatorForClick = "//*[contains(text(), 'Parent Account')]";
 
     public Input(WebDriver driver, String label) {
@@ -24,7 +24,7 @@ public class Input {
         driver.findElement(By.xpath(String.format(locatorForAccount, label))).sendKeys(text);
     }
 
-    public void click(){
+    public void click() {
         driver.findElement(By.xpath(String.format(locatorForClick))).click();
     }
 
