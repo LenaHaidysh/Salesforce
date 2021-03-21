@@ -21,7 +21,7 @@ public class BaseTest {
     HomePage homePage;
     LoginSteps loginSteps;
     ContactSteps contactSteps;
-    AccountListPage accountListPage;
+    AccountPage accountPage;
     ContactListPage contactListPage;
 
 
@@ -39,7 +39,7 @@ public class BaseTest {
         homePage = new HomePage(driver);
         loginSteps = new LoginSteps(driver);
         contactSteps = new ContactSteps(driver);
-        accountListPage = new AccountListPage(driver);
+        accountPage = new AccountPage(driver);
         contactListPage= new ContactListPage(driver);
         String variable = "driver";
         System.out.println("Setting driver into context with variable name " + variable);

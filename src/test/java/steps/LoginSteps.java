@@ -21,6 +21,6 @@ public class LoginSteps {
         LoginPage loginPage = new LoginPage(driver);
         loginPage.openLoginPage();
         loginPage.login(user, password);
-        //assertTrue(new HomePage(driver).isPageOpened1(), "Home page was not opened");
+        assertTrue(new HomePage(driver).isPageOpened1(), "Home page was not opened");
     }
 }

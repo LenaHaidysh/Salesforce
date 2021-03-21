@@ -45,7 +45,7 @@ public class NewContactModal extends BasePage {
         try {
             wait.until(ExpectedConditions.elementToBeClickable(SAVE_BUTTON));
         } catch (TimeoutException ex) {
-            Assert.fail("Страница с корзиной не была загружена");
+            Assert.fail("Страница с модальным окном не была загружена");
         }
     }
 }

@@ -8,11 +8,7 @@ import models.Contact;
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
-import org.testng.Assert;
 import org.testng.annotations.Test;
-import pages.ContactListPage;
 
 import static org.testng.Assert.assertEquals;
 
@@ -29,16 +25,13 @@ public class ContactTest extends BaseTest {
         Contact contact = new Contact("Lena1", "Smith", "Lenana", "+375291111111", "2223344");
         //BUILDER pattern
         //FACTORY
-
         contactSteps.create(contact);
         contactListPage.openContactsPage();
         Alert alert = driver.switchTo().alert();
         alert.dismiss();
         contactListPage.isPageOpened();
-        WebElement contactPresent = driver.findElement(By.xpath("//*[text()='"+  contact.getFirstName() +" "+ contact.getLastName() +"']"));
-        //" +  contact.getFirstName() + "
+        WebElement contactPresent = driver.findElement(By.xpath("//*[text()='" + contact.getFirstName() + " " + contact.getLastName() + "']"));
         String actualResult = contactPresent.getText();
-        assertEquals(actualResult, String.format(contact.getFirstName() +" "+ contact.getLastName()) , "контакт не найден");
+        assertEquals(actualResult, String.format(contact.getFirstName() + " " + contact.getLastName()), "контакт не найден");
     }
-
 }

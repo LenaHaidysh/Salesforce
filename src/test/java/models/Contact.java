@@ -14,32 +14,16 @@ public class Contact {
         return firstName;
     }
 
-    public void setFirstName(String firstName) {
-        this.firstName = firstName;
-    }
-
     public String getLastName() {
         return lastName;
-    }
-
-    public void setLastName(String lastName) {
-        this.lastName = lastName;
     }
 
     public String getAccountName() {
         return accountName;
     }
 
-    public void setAccountName(String accountName) {
-        this.accountName = accountName;
-    }
-
     public String getPhone() {
         return phone;
-    }
-
-    public void setPhone(String phone) {
-        this.phone = phone;
     }
 
     public String getMobile() {
@@ -51,10 +35,6 @@ public class Contact {
         this.lastName = lastName;
         this.accountName = accountName;
         this.phone = phone;
-        this.mobile = mobile;
-    }
-
-    public void setMobile(String mobile) {
         this.mobile = mobile;
     }
 
